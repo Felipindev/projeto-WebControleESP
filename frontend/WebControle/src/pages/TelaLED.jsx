@@ -67,6 +67,17 @@ export default function TelaLED() {
                         Desligar
                     </button>
                 </div>
+                {/* 🔘 Botão estilizado para o projeto */}
+                <div className="mt-10 flex justify-center">
+                    <a
+                        href="https://wokwi.com/projects/438623113126295553"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold text-lg shadow-lg hover:scale-105 transform transition duration-300 hover:shadow-2xl"
+                    >
+                        🔗 Ver Simulação no Wokwi
+                    </a>
+                </div>
             </div>
         </div>
     )

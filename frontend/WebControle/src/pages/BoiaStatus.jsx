@@ -46,6 +46,17 @@ export default function BoiaStatus() {
                     <span className="text-blue-600 font-bold animate-pulse text-xl">BAIXO</span>
                 )}
             </div>
+            {/* 🔘 Botão estilizado para o projeto */}
+                <div className="mt-10 flex justify-center">
+                    <a
+                        href="https://wokwi.com/projects/439347338986335233"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold text-lg shadow-lg hover:scale-105 transform transition duration-300 hover:shadow-2xl"
+                    >
+                        🔗 Ver Simulação no Wokwi
+                    </a>
+                </div>
         </div>
     </div>
     )

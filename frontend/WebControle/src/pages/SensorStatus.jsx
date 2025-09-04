@@ -49,6 +49,17 @@ export default function SensorStatus() {
                             {statusSensor.umidade ? <span className='bg-blue-100 rounded-full px-6 py-2 text-blue-700 font-bold text-xl shadow animate-pulse'>{statusSensor.umidade}%</span> : <span className='text-red-600 font-bold animate-pulse text-xl ml-2'>indisponível...</span>}
                         </div>
                     </div>
+                {/* 🔘 Botão estilizado para o projeto */}
+                <div className="mt-10 flex justify-center">
+                    <a
+                        href="https://wokwi.com/projects/439918151790671873"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold text-lg shadow-lg hover:scale-105 transform transition duration-300 hover:shadow-2xl"
+                    >
+                        🔗 Ver Simulação no Wokwi
+                    </a>
+                </div>
                 </div>
             </div>
         </div>
