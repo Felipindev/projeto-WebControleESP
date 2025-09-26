@@ -2,6 +2,7 @@ import rotaLed from "./routes/rotaLed.js";
 import rotaBoia from "./routes/rotaBoia.js";
 import rotaSensor from "./routes/rotaSensor.js";
 import rotaSensorSolo from "./routes/rotaSensorSolo.js";
+import rotaMonitorChuva from "./routes/RotaMonitorChuva.js";
 import express from "express";
 import cors from "cors";
 
@@ -27,6 +28,9 @@ app.get('/api/statusSensor', rotaSensor.lerStatus)
 
 //rota para leitura dos status do sensor de umidade
 app.get('/api/sensorUmidade', rotaSensorSolo.lerSensorSolo )
+
+//rota para leitura dos status do sensor de chuva
+app.get('/api/monitorChuva', rotaMonitorChuva.lerMonitorChuva )
 
 const porta = 3000;
 app.listen(porta, () => {

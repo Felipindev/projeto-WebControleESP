@@ -7,6 +7,7 @@ import TelaLED from "./TelaLED";
 import BoiaStatus from "./BoiaStatus";
 import SensorStatus from "./SensorStatus"; // Importando o novo componente SensorStatus
 import SensorSolo from "./SensorSolo";
+import MonitorChuva from "./MonitorChuva";
 
 
 export default function Principal() {
@@ -39,13 +40,19 @@ export default function Principal() {
             className="flex items-center gap-4 hover:bg-gray-700 p-2 rounded"
             onClick={() => setMenuAberto(false)}>
             <IoIosWater />
-            <span>Sensor DHT</span>
+            <span>Tela Temp e Umid</span>
           </Link> 
           <Link to="/SensorSolo"
             className="flex items-center gap-4 hover:bg-gray-700 p-2 rounded"
             onClick={() => setMenuAberto(false)}>
             <IoIosWater />
-            <span>Sensor Umidade</span>
+            <span>Sensor Solo</span>
+          </Link> 
+          <Link to="/MonitorChuva"
+            className="flex items-center gap-4 hover:bg-gray-700 p-2 rounded"
+            onClick={() => setMenuAberto(false)}>
+            <IoIosWater />
+            <span>Monitor Chuva</span>
           </Link> 
         </nav>
       </div>
@@ -61,6 +68,7 @@ export default function Principal() {
           <Route path="/BoiaStatus" element={<BoiaStatus />} />
           <Route path="/SensorStatus" element={<SensorStatus />} />
           <Route path="/SensorSolo" element={<SensorSolo />} />
+          <Route path="/MonitorChuva" element={<MonitorChuva />} />
         </Routes>
       </div>
     </div>

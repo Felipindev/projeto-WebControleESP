@@ -14,8 +14,6 @@ export default function SensorStatus() {
             setStatusSensor(dados);
             console.log(dados);
             
-            console.log('Status do sensor:', dados.temperatura);
-            
         } catch (error) {
             console.error('Erro:', error);
             console.log(statusSensor);
