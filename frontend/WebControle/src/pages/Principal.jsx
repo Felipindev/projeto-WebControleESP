@@ -8,6 +8,8 @@ import BoiaStatus from "./BoiaStatus";
 import SensorStatus from "./SensorStatus"; // Importando o novo componente SensorStatus
 import SensorSolo from "./SensorSolo";
 import MonitorChuva from "./MonitorChuva";
+import SistemaDefesa from "./SistemaDefesa";
+import TelasWokwi from "./TelasWokwi";
 
 
 export default function Principal() {
@@ -54,6 +56,18 @@ export default function Principal() {
             <IoIosWater />
             <span>Monitor Chuva</span>
           </Link> 
+          <Link to="/SistemaDefesa"
+            className="flex items-center gap-4 hover:bg-gray-700 p-2 rounded"
+            onClick={() => setMenuAberto(false)}>
+            <IoIosWater />
+            <span>Sistema DEFESA</span>
+          </Link> 
+          <Link to="/TelasWokwi"
+            className="flex items-center gap-4 hover:bg-gray-700 p-2 rounded"
+            onClick={() => setMenuAberto(false)}>
+            <IoIosWater />
+            <span>Telas Wokwi</span>
+          </Link> 
         </nav>
       </div>
 
@@ -69,6 +83,8 @@ export default function Principal() {
           <Route path="/SensorStatus" element={<SensorStatus />} />
           <Route path="/SensorSolo" element={<SensorSolo />} />
           <Route path="/MonitorChuva" element={<MonitorChuva />} />
+          <Route path="/SistemaDefesa" element={<SistemaDefesa />} />
+          <Route path="/TelasWokwi" element={<TelasWokwi />} />
         </Routes>
       </div>
     </div>

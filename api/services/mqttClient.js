@@ -15,6 +15,7 @@ const TOPICO_UMIDADE = 'projeto/05/umidade';
 const SENSOR_SOLO = 'projeto/05/sensorUmidade';
 const CONDICAO_SOLO = 'projeto/05/condicaoSolo';
 const MONITOR_CHUVA = 'projeto/05/monitorChuva';
+const SISTEMA_DEFESA = 'projeto/05/sistemaDefesa';
 
 let mqttClient;
 let subscriptions = {};
@@ -82,6 +83,11 @@ function conectarMqtt(){
             }
 
         })
+        mqttClient.subscribe(SISTEMA_DEFESA, (err) => {
+            if (!err){
+                console.log(`INSCRITO NO TÓPICO: ${SISTEMA_DEFESA}`);
+            }
+        })
 
     })
     mqttClient.on('message', (topic, message)=> {
@@ -115,4 +121,4 @@ function publicar(topic, message){
 
 conectarMqtt();
 // Exporta as funções e constantes necessárias
-export {onMessage, publicar, TOPICO_STATUS, TOPICO_COMANDO_LED, STATUS_BOIA, TOPICO_TEMPERATURA, TOPICO_UMIDADE, CONDICAO_SOLO, SENSOR_SOLO, MONITOR_CHUVA};
+export {onMessage, publicar, TOPICO_STATUS, TOPICO_COMANDO_LED, STATUS_BOIA, TOPICO_TEMPERATURA, TOPICO_UMIDADE, CONDICAO_SOLO, SENSOR_SOLO, MONITOR_CHUVA, SISTEMA_DEFESA};
